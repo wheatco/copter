@@ -1,3 +1,4 @@
+#!/bin/bash
 # Install Rust, multirust heavily recommended
 sudo apt-get install -y -qq curl git
 curl -sf https://raw.githubusercontent.com/brson/multirust/master/blastoff.sh | sh
@@ -11,9 +12,8 @@ sudo apt-get install -y -qq gcc-arm-linux-gnueabihf
 # (NOTE In the future (*), all these steps will be replaced by a single command:
 #  `multirust add-target arm-unknown-linux-gnueabihf`)
 mkdir tmp
-cd /tmp
+cd tmp
 rustc -V
-rustc 1.6.0 (c30b771ad 2016-01-19)
 curl -O http://static.rust-lang.org/dist/rust-std-1.6.0-arm-unknown-linux-gnueabihf.tar.gz
 tar xzf rust-std-1.6.0-arm-unknown-linux-gnueabihf.tar.gz
 cd rust-std-1.6.0-arm-unknown-linux-gnueabihf
