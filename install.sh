@@ -1,7 +1,8 @@
 #!/bin/bash
 # Install Rust, multirust heavily recommended
 sudo apt-get install -y -qq curl git
-curl -sf https://raw.githubusercontent.com/brson/multirust/master/blastoff.sh | sudo sh << "y"
+export YES=true
+curl -sf https://raw.githubusercontent.com/brson/multirust/master/blastoff.sh | sudo sh
 
 # Step 0: Our target is an ARMv7 device, the triple for this target is `arm-unknown-linux-gnueabihf`
 
