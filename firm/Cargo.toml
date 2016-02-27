@@ -1,0 +1,6 @@
+[package]
+name = "firm"
+version = "0.1.0"
+authors = ["Adam Canady <adam@adamcanady.com>"]
+
+[dependencies]
