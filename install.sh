@@ -22,11 +22,6 @@ cd rust-std-1.6.0-arm-unknown-linux-gnueabihf
 cd ../..
 rm -r tmp
 
-# Step 3: Configure cargo for cross compilation
-mkdir -p ~/.cargo
-echo '[target.arm-unknown-linux-gnueabihf]' > ~/.cargo/config
-echo 'linker = "arm-linux-gnueabihf-gcc"' > ~/.cargo/config
-
 # # Test cross compiling a Cargo project
 # cargo new --bin hello
 # cd hello
