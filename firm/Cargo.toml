@@ -1,5 +1,5 @@
 [package]
-name = "firm"
+name = "copter"
 version = "0.1.0"
 authors = ["Adam Canady <adam@adamcanady.com>", "Robert Lord <hello@lord.io>"]
 
