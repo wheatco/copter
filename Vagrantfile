@@ -66,6 +66,6 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
-    sudo apt-get install -y build-essential
+    sudo apt-get install -y build-essential gcc-arm-linux-gnueabihf
   SHELL
 end

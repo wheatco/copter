@@ -15,3 +15,5 @@
 Cargo.lock
 
 .vagrant
+tmp_firmware_eval
+chip_examples
