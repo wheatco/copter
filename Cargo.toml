@@ -1,0 +1,10 @@
+[package]
+name = "copter"
+version = "0.1.0"
+authors = ["Adam Canady <adam@adamcanady.com>", "Robert Lord <hello@lord.io>"]
+
+[dependencies]
+i2cdev = {git = "https://github.com/wheatco/rust-i2cdev.git"}
+byteorder = "*"
+
+
