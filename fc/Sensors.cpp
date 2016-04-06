@@ -241,6 +241,23 @@ void waitTransmissionI2C() {
   }
 }
 
+void waitTransmissionI2CVarTime(uint16_t count, uint16_t outercount) {
+  uint16_t origCount = count;
+  while (!(TWCR & (1<<TWINT))) {
+    count--;
+    if (count==0) {
+      outercount--;
+      count = origCount;
+      if (outercount==0)              //we are in a blocking state => we don't insist
+        TWCR = 0;                  //and we force a reset on TWINT register
+        neutralizeTime = micros(); //we take a timestamp here to neutralize the value during a short delay
+        i2c_errors_count++;
+        break;
+      }
+    }
+  }
+}
+
 size_t i2c_read_to_buf(uint8_t add, void *buf, size_t size) {
   i2c_rep_start((add<<1) | 1);  // I2C read direction
   size_t bytes_read = 0;

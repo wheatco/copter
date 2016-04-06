@@ -830,6 +830,8 @@ void loop () {
         if ( rcOptions[BOXARM] && f.OK_TO_ARM ) go_arm(); else if (f.ARMED) go_disarm();
       }
     }
+
+    // Work out whether we should be arming or disarming (if disarming, reset baro/gps, LCD and iteration counters)
     if(rcDelayCommand == 20) {
       if(f.ARMED) {                   // actions during armed
         #ifdef ALLOW_ARM_DISARM_VIA_TX_YAW
@@ -926,6 +928,7 @@ void loop () {
         }
       }
     }
+    
     #if defined(LED_FLASHER)
       led_flasher_autoselect_sequence();
     #endif
