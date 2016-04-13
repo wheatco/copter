@@ -10,7 +10,7 @@ We're using Cleanflight on a Naze 32 for this project. Cleanflight is located in
 
 The process for cloning the repo looks like this:
 
-    git clone git@github.com:wheatco/copter.git
+    git clone --recursive git@github.com:wheatco/copter.git
     git submodule foreach git pull origin master
 
 Then, when the repo is open, just type `./build_fc.sh` to run the build script. It will automatically untar the cross compilation scripts if you haven't done so already, then use them to compile cleanflight (located in the `fc` directory). Also note that we're purposely using GCC v4.9 from Q2 2015 because newer versions are incompatible with the cleanflight.
