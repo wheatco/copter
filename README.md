@@ -2,6 +2,19 @@
 
 This code runs on the Raspberry Pi 2, receives sensor and control data and controls the motors.
 
+## Flight controller firmware
+
+_Note:_ This currently works with Mac OSX 10.11.4.
+
+We're using Cleanflight on a Naze 32 for this project. Cleanflight is located in the `fc` subdirectory of this repository as a git submodule. We also have large files in the repository stored with `git lfs`, so you'll need to install that: `brew install git-lfs`.
+
+The process for cloning the repo looks like this:
+
+    git clone git@github.com:wheatco/copter.git
+    git submodule foreach git pull origin master
+
+Then, when the repo is open, just type `./build_fc.sh` to run the build script. It will automatically untar the cross compilation scripts if you haven't done so already, then use them to compile cleanflight (located in the `fc` directory). Also note that we're purposely using GCC v4.9 from Q2 2015 because newer versions are incompatible with the cleanflight.
+
 ## Setting Up Rust on your Pi
 
 First, download [ARMv7](https://github.com/warricksothr/RustBuild#stable) builds of Cargo and Rust to `cargo.tar.gz` and `rust.tar.gz` on your Pi. Then just run:
