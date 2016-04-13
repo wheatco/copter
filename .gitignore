@@ -13,3 +13,7 @@
 .vagrant
 tmp_firmware_eval
 chip_examples
+
+
+# Extracted fc compiler .tar.gz
+gcc-arm-none-eabi-4_9-2015q2/
