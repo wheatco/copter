@@ -1,3 +1,6 @@
 [submodule "fc"]
 	path = fc
 	url = git@github.com:cleanflight/cleanflight.git
+[submodule "msp"]
+	path = msp
+	url = git@github.com:alduxvm/pyMultiWii.git
