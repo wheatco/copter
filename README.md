@@ -42,3 +42,12 @@ TODO add hardware info
 Make sure i2c is enabled. We did this by running `raspi-config` and choosing the enable i2c option.
 
 Download this project to the Pi, and just `cargo run`.
+
+## Plan
+6th Week:
+
+7th Week:
+
+8th Week:
+
+9th Week:
