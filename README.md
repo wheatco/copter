@@ -51,3 +51,9 @@ Download this project to the Pi, and just `cargo run`.
 8th Week:
 
 9th Week:
+
+## Vision setup
+
+1. Expand volume by running `raspi-config` on the pi.
+2. `sudo apt-get install -y  build-essential cmake pkg-config git libjpeg8-dev libjasper-dev libpng12-dev libgtk2.0-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libatlas-base-dev gfortran python-pip python-dev `
+3. `sudo apt-get install -f` if (2) fails
